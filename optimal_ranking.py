@@ -1,13 +1,13 @@
 from visible_edge import find_visible_edges
-
+from test_graph import adj_list
 import collections
 
-def is_leaf(vertex):
-    if len(adj_list[vertex] == 1):
-        return True
-    return False
-
-ds = {v:i for v, i in zip(list(adj_list.keys()), range(len(adj_list)))}
+def leafs(adj_list):
+    leafs_ = []
+    for vertex in adj_list:
+        if len(adj_list[vertex] == 1):
+            leafs_.append(vertex)
+    return leafs_
 
 def breadth_first_search(graph, root): 
     visited, queue = set(), collections.deque([root])
@@ -15,12 +15,16 @@ def breadth_first_search(graph, root):
     while queue: 
         j += 1
         vertex = queue.popleft()
-        if is_leaf(vertex):
-            ds[vertex] = leaf_rankings[j]
+        
         for neighbour in graph[vertex]: 
             if neighbour not in visited: 
                 visited.add(neighbour) 
                 queue.append(neighbour) 
+
+
+
+
+
 
 if __name__ == '__main__':
     graph = {
