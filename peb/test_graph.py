@@ -1,3 +1,4 @@
+#from optimal_ranking import breadth_first_search
 adj_list = {
     'A': [('B', 4), ('C', 1), ('D', 5)],
     'B': [('A', 4), ('E', 3), ('F', 1)],
@@ -16,3 +17,12 @@ adj_list = {
     'O': [('H', 3)]
 }
 
+
+def unweighted_graph(adj_list):
+    new_g = {}
+    for vertex in adj_list:
+        new_g[vertex] = [i[0] for i in adj_list[vertex]]
+    return new_g
+    
+if __name__ == "__main__":
+    print(unweighted_graph(adj_list))
