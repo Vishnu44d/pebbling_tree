@@ -1,3 +1,5 @@
+##pebbling tree
+
 The visible_edge.py file computes the visible edges will compute the set of visible edges from a weighted graph given in the following formate.
 adj_list = {
     'A': [('B', 4), ('C', 1), ('D', 5)],
@@ -17,5 +19,4 @@ adj_list = {
     'O': [('H', 3)]
 }
 
-All the files are in peb.
-fff
+
