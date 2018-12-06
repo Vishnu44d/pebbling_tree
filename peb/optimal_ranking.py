@@ -1,6 +1,6 @@
 #from visible_edge import find_visible_edges
 #from test_graph import adj_list, unweighted_graph
-from test_graph import *
+from .test_graph import *
 
 import collections
 
