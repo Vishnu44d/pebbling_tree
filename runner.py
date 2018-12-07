@@ -2,10 +2,6 @@ from peb.tree.tree import Tree
 from peb.test_graph import adj_list, unweighted_graph
 
 
-
-
-
-
 def adj_to_tree(graph):
     tree = Tree()
     for vertex, i in zip(graph, range(len(graph))):
@@ -16,10 +12,6 @@ def adj_to_tree(graph):
     return tree
 
 
-
 if __name__ == "__main__":
     graph = unweighted_graph(adj_list)
     adj_to_tree(graph).display("A")
-
-
-

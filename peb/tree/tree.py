@@ -4,7 +4,6 @@ from .node import Node
 
 
 class Tree:
-
     def __init__(self):
         self.__nodes = {}
 
@@ -15,7 +14,7 @@ class Tree:
     def add_node(self, identifier, parent=None):
         node = Node(identifier)
         self[identifier] = node
-
+        
         if parent is not None:
             self[parent].add_child(identifier)
 
@@ -31,6 +30,7 @@ class Tree:
         depth += 1
         for child in children:
             self.display(child, depth)  # recursive call
+
 
     def traverse(self, identifier, mode=_DEPTH):
         # Python generator. Loosly based on an algorithm from 

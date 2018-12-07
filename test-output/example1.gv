@@ -1,0 +1,46 @@
+// Example-1
+digraph {
+	A [label=A]
+	B [label=B]
+	C [label=C]
+	D [label=D]
+	E [label=E]
+	F [label=F]
+	G [label=G]
+	H [label=H]
+	I [label=I]
+	J [label=J]
+	K [label=K]
+	L [label=L]
+	M [label=M]
+	N [label=N]
+	O [label=O]
+	A -> B
+	A -> C
+	A -> D
+	B -> A
+	B -> E
+	B -> F
+	C -> A
+	C -> G
+	D -> A
+	D -> H
+	E -> B
+	E -> I
+	E -> J
+	F -> B
+	G -> C
+	G -> K
+	G -> L
+	H -> D
+	H -> M
+	H -> N
+	H -> O
+	I -> E
+	J -> E
+	K -> G
+	L -> G
+	M -> H
+	N -> H
+	O -> H
+}
